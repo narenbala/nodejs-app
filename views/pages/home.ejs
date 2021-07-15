@@ -11,28 +11,19 @@
 
 <main>
   <div class="box" >
-    <h1>Welcome to online Web Development course </h1>
-
+    <h1 class="head1">Welcome to online Web Development course </h1>
+    
     <div>
-      <h1>What is Web Developement?</h1>
-      <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. </p>
-    </div>
-
-    <div>
+      <h1>Course list</h1>
        <% list.forEach(data => { %>
-         <p style="font-weight: 600;"><%= data.title %></p>
+         <h2 style="font-weight: 600;"><%= data.title %></h2>
           <ul>
             <li>Days -<%= data.days %></li>
             <li>Fees - <%= data.fees %></li>
           </ul>
        <% }) %>
     </div>
-    <div>
-      <h1>Student</h1>
-      <% student.forEach(item => { %>
-        <p><%= item.name %> - <%= item.language %></p>
-      <% }) %>
-    </div>
+
     <div>
       <h1>What is Web Developement?</h1>
       <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. </p>

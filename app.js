@@ -44,8 +44,9 @@ var db = firebase.firestore();
 
 db.collection("online course").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        console.log(doc.data().title);
-        console.log(doc.data().fees);
+        const title = doc.data().title;
+        const days = doc.data().days;
+        const fees = doc.data().fees;
     });
 });
 
@@ -58,19 +59,8 @@ app.get('/', (req, res) => {
         {title: 'react', days: 20, fees: 4000}
     ]
 
-    const student = [
-        {name: 'ravi',language: 'html'},
-        {name: 'raja',language: 'css'},
-        {name: 'abi',language: 'javascript'},
-        {name: 'jack',language: 'react'},
-        {name: 'john',language: 'css'},
-        {name: 'tom',language: 'react'},
-        {name: 'sam',language: 'html'}
-    ]
-
     res.render('pages/home', {
         list: list,
-        student: student
     })
 })
 
