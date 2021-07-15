@@ -10,29 +10,32 @@
 </header>
 
 <main>
-  <div class="jumbotron">
-    <img src="covid.jpeg" alt="covid cover image" style="margin-bottom: 1.8rem;">
-    <h1>Stats</h1>
-    <small>(The stats given here are just for educational purpose, not upto date)</small>
+  <div class="box" >
+    <h1>Welcome to online Web Development course </h1>
 
-    <div style="margin: 2rem 0; color: red;">
-      <h2><%= totalCases %></h2>
+    <div>
+      <h1>What is Web Developement?</h1>
+      <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. </p>
     </div>
 
-    <div style="margin: 2rem 0;">
-       <% stats.forEach(data => { %>
-         <p style="font-weight: 600;"><%= data.state %></p>
+    <div>
+       <% list.forEach(data => { %>
+         <p style="font-weight: 600;"><%= data.title %></p>
           <ul>
-            <li>Active cases -<%= data.active %></li>
-            <li>Confirmed cases - <%= data.confirmed %></li>
+            <li>Days -<%= data.days %></li>
+            <li>Fees - <%= data.fees %></li>
           </ul>
        <% }) %>
     </div>
-    <h1>Who we are?</h1>
-    <p>We are a group of dedicated volunteers who curate and verify the data coming from several sources. We extract the details, like a patient's relationship with other patients to identify local and community transmissions, travel history and status. We never collect or expose any personally identifiable data regarding the patients.</p>
-    <div style="margin-top: 50px;">
-      <h1>About COVID</h1>
-    <p>Coronaviruses (CoV) are a large family of viruses that cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS-CoV) and Severe Acute Respiratory Syndrome (SARS-CoV). A novel coronavirus (nCoV) is a new strain that has not been previously identified in humans.</p>
+    <div>
+      <h1>Student</h1>
+      <% student.forEach(item => { %>
+        <p><%= item.name %> - <%= item.language %></p>
+      <% }) %>
+    </div>
+    <div>
+      <h1>What is Web Developement?</h1>
+      <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. </p>
     </div>
   </div>
 </main>
